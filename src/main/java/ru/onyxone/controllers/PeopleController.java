@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.onyxone.dao.PersonDAO;
+import ru.onyxone.dao.PersonDaoDb;
 import ru.onyxone.models.Person;
 
 import javax.validation.Valid;
@@ -14,10 +15,10 @@ import javax.validation.Valid;
 @RequestMapping("/people")
 public class PeopleController {
 
-    private final PersonDAO personDAO;
+    private final PersonDaoDb personDAO;
 
     @Autowired
-    public PeopleController(PersonDAO personDAO) {
+    public PeopleController(PersonDaoDb personDAO) {
         this.personDAO = personDAO;
     }
 
